@@ -15,13 +15,11 @@ void draw()
 {
   if ( myPort.available() > 0) {  // If data is available,
     inByte = myPort.read();         // read it and store it in val
-    //println(inByte);
+    println(inByte);
   }
-  
   background(0);
   fill( map(inByte, 0, 255, 0, 255), 0, 0 );
   ellipse( width/2.0, height/2.0, 150, 150);
-  
 }
 
 

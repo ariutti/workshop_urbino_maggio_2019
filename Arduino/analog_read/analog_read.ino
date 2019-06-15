@@ -1,17 +1,18 @@
-#define PHOTO A0
+#define POT A5
 
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  int value = analogRead(PHOTO);
+  int value = analogRead(POT);
   Serial.write( value/4 );
-  delay(10);
+  delay(100);
 }
 
-/*
 
+
+/*
 import processing.serial.*;
 Serial myPort;
 int inByte;
@@ -35,7 +36,5 @@ void draw()
   background(0);
   fill( map(inByte, 0, 255, 0, 255), 0, 0 );
   ellipse( width/2.0, height/2.0, 150, 150);
-  
 }
-
  */
